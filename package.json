@@ -1,0 +1,27 @@
+{
+    "name": "@fqlan/add-example-prebuildify1",
+    "version": "0.0.1",
+    "main": "./index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lanfungcing/add-example-prebuildify1.git"
+    },
+    "files": [
+        "binding.gyp",
+        "index.js",
+        "src/add.cpp",
+        "prebuilds"
+    ],
+    "dependencies": {
+        "node-gyp-build": "^4.0.0",
+        "node-addon-api": "^8.5.0"
+    },
+    "devDependencies": {
+        "prebuildify": "^6.0.1",
+        "node-gyp": "^11.3.0"
+    },
+    "scripts": {
+        "install": "node-gyp-build",
+        "prebuild": "prebuildify --napi"
+    }
+}
